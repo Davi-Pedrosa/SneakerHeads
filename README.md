@@ -23,3 +23,7 @@ Utiliza HTML, CSS e JavaScript para uma interface limpa e interativa, com requis
 #### Banco de Dados: 
 A estrutura de dados foi modelada em formato JSON no MongoDB ou SQL no Postgress, facilitando o gerenciamento das informações de usuários, produtos e categorias.
 
+### Exemplo Collection Aninhada Json
+<img src="imagens/" alt="json" width="300"/>
+
+
