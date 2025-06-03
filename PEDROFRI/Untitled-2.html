@@ -5,154 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - SneakerHeadsss</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
             margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        .container {
+            width: 100%;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
         }
-
-        .container {
+        .login-box {
             background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             width: 400px;
+        }
+        .login-box h1 {
+            margin-bottom: 10px;
             text-align: center;
         }
-
-        .container h1 {
-            margin-bottom: 10px;
-        }
-
-        .container p {
-            color: #666;
-            font-size: 14px;
+        .login-box p {
+            text-align: center;
+            color: #777;
             margin-bottom: 30px;
+            font-size: 14px;
         }
-
         input[type="email"],
         input[type="password"] {
             width: 100%;
-            padding: 12px;
-            margin: 8px 0 16px 0;
+            padding: 15px;
             border: 1px solid #ccc;
             border-radius: 8px;
-            box-sizing: border-box;
-        }
-
-        .forgot {
-            display: block;
-            text-align: right;
-            font-size: 13px;
-            color: #007BFF;
-            text-decoration: none;
             margin-bottom: 20px;
+            font-size: 14px;
         }
-
-        button {
-            width: 100%;
-            background-color: #004225;
-            color: white;
+        .options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .options label {
+            display: flex;
+            align-items: center;
+        }
+        .options input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .options a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+        .options a:hover {
+            text-decoration: underline;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .buttons button {
+            flex: 1;
             padding: 12px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
+            font-size: 15px;
             font-weight: bold;
-            font-size: 16px;
+            transition: 0.3s;
         }
-
-        button:hover {
-            background-color: #002d18;
+        .login-btn {
+            background-color: #0077cc;
+            color: white;
         }
-
-        .or {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            margin: 20px 0;
+        .login-btn:hover {
+            background-color: #005fa3;
         }
-
-        .or::before, .or::after {
-            content: "";
-            flex: 1;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .or:not(:empty)::before {
-            margin-right: .75em;
-        }
-
-        .or:not(:empty)::after {
-            margin-left: .75em;
-        }
-
-        .social-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            cursor: pointer;
+        .signup-btn {
             background-color: white;
+            border: 2px solid #0077cc;
+            color: #0077cc;
         }
-
-        .social-button img {
-            width: 20px;
-            margin-right: 8px;
+        .signup-btn:hover {
+            background-color: #f0f8ff;
         }
-
-        .signup {
-            margin-top: 20px;
-            font-size: 14px;
+        .social {
+            text-align: center;
+            margin-top: 30px;
+            color: #aaa;
+            font-size: 13px;
         }
-
-        .signup a {
-            color: #007BFF;
+        .social a {
+            color: #aaa;
+            margin: 0 6px;
             text-decoration: none;
         }
-
-        .signup a:hover {
+        .social a:hover {
             text-decoration: underline;
         }
-
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Bem-vindo de volta 👋</h1>
-    <p>Os melhores sneakers estão te esperando. Faça login e garanta seu estilo nas ruas.<br>Faça login e comece sua busca.</p>
+    <div class="login-box">
+        <h1>Bem-vindo!</h1>
+        <p>Entre na sua conta para continuar.</p>
 
-    <form action="index.html" method="GET">
-        <input type="email" placeholder="seuemail@email.com" required>
-        <input type="password" placeholder="Crie uma senha" required>
+        <form action="index.html" method="GET">
+            <input type="email" placeholder="Seu email" required>
+            <input type="password" placeholder="Sua senha" required>
 
-        <a href="#" class="forgot">Esqueceu sua senha?</a>
+            <div class="options">
+                <label><input type="checkbox"> Lembrar-me</label>
+                <a href="#">Esqueceu a senha?</a>
+            </div>
 
-        <button type="submit">Entrar</button>
-    </form>
+            <div class="buttons">
+                <button type="submit" class="login-btn">Login</button>
+                <button type="button" class="signup-btn" onclick="window.location.href='cadastro.html'">Cadastre-se</button>
+            </div>
+        </form>
 
-    <div class="or">Ou</div>
-
-    <div class="social-button">
-        <img src="google.png" alt="Google">
-        Entrar com Google
-    </div>
-
-    <div class="social-button">
-        <img src="facebook.png" alt="Facebook">
-        Entrar com Facebook
-    </div>
-
-    <div class="signup">
-        Não tem uma conta? <a href="#">Cadastre-se</a>
+        <div class="social">
+            Siga-nos:
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">Twitter</a>
+        </div>
     </div>
 </div>
 
