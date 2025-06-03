@@ -49,40 +49,46 @@ $base_path = '';
 ?>
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - SneakerHeadsss</title>
-    <link rel="stylesheet" href="css/cadastro.css" />
-    <link rel="stylesheet" href="css/header.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
     <?php include 'includes/header.php'; ?>
 
     <div class="container">
-      <h1>Crie sua conta</h1>
-      <p>Faça parte da nossa comunidade sneaker!</p>
+        <div class="login-box">
+            <h1>Crie sua conta</h1>
+            <p>Faça parte da nossa comunidade sneaker!</p>
 
-      <?php if (isset($erro)): ?>
-          <div class="error-message"><?php echo $erro; ?></div>
-      <?php endif; ?>
+            <?php if (isset($erro)): ?>
+                <div class="error-message"><?php echo $erro; ?></div>
+            <?php endif; ?>
 
-      <form method="POST" action="">
-        <input type="text" name="nome" placeholder="Nome completo" required />
-        <input type="email" name="email" placeholder="Seu e-mail" required />
-        <input
-          type="password"
-          name="senha"
-          placeholder="Senha (mínimo 8 caracteres)"
-          required
-        />
-        <input type="text" name="endereco" placeholder="Endereço completo (Rua, Número, Bairro)" required />
-        <input type="text" name="cpf" placeholder="CPF (apenas números)" required />
+            <form method="POST" action="">
+                <input type="text" name="nome" placeholder="Nome completo" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <input type="password" name="senha" placeholder="Senha (mínimo 8 caracteres)" required>
+                <input type="text" name="endereco" placeholder="Endereço completo (Rua, Número, Bairro)" required>
+                <input type="text" name="cpf" placeholder="CPF (apenas números)" required>
 
-        <button type="submit">Cadastrar</button>
-      </form>
+                <div class="buttons">
+                    <button type="submit" class="login-btn">Cadastrar</button>
+                </div>
+            </form>
 
-      <div class="login">Já tem uma conta? <a href="login.php">Entrar</a></div>
+            <div class="social">
+                Siga-nos:
+                <a href="#">Facebook</a> |
+                <a href="#">Instagram</a> |
+                <a href="#">Twitter</a>
+            </div>
+            
+            <div class="login">Já tem uma conta? <a href="login.php">Entrar</a></div>
+        </div>
     </div>
-  </body>
+</body>
 </html> 

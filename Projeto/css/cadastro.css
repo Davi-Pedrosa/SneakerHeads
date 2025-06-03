@@ -1,70 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
     margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
 }
 
 .container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
     background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 450px;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 400px;
+    margin-top: 30px;
+}
+
+.login-box h1 {
+    margin-bottom: 10px;
     text-align: center;
 }
 
-.container h1 {
-    margin-bottom: 10px;
-}
-
-.container p {
-    color: #666;
-    font-size: 14px;
+.login-box p {
+    text-align: center;
+    color: #777;
     margin-bottom: 30px;
+    font-size: 14px;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
     width: 100%;
-    padding: 12px;
-    margin: 8px 0 16px 0;
+    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 14px;
 }
 
-button {
-    width: 100%;
-    background-color: #004225;
-    color: white;
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    flex: 1;
     padding: 12px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    font-size: 15px;
     font-weight: bold;
-    font-size: 16px;
+    transition: 0.3s;
 }
 
-button:hover {
-    background-color: #002d18;
+.login-btn {
+    background-color: rgb(175, 61, 26);
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #8c3115;
+}
+
+.social {
+    text-align: center;
+    margin-top: 30px;
+    color: #aaa;
+    font-size: 13px;
+}
+
+.social a {
+    color: #aaa;
+    margin: 0 6px;
+    text-decoration: none;
+}
+
+.social a:hover {
+    text-decoration: underline;
 }
 
 .login {
+    text-align: center;
     margin-top: 20px;
     font-size: 14px;
 }
 
 .login a {
-    color: #007BFF;
+    color: #0077cc;
     text-decoration: none;
 }
 
 .login a:hover {
     text-decoration: underline;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
 }
