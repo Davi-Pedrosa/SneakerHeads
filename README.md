@@ -21,10 +21,7 @@ Desenvolvido com PHP, garantindo eficiência para manipulação de dados.
 #### Front-End: 
 Utiliza HTML, CSS e JavaScript para uma interface limpa e interativa, com requisições dinâmicas para exibir os produtos disponíveis.
 #### Banco de Dados: 
-A estrutura de dados foi modelada em formato JSON no MongoDB ou SQL no Postgress, facilitando o gerenciamento das informações de usuários, produtos e categorias.
+O banco de dados foi modelado em SQL no Postgress, facilitando o gerenciamento das informações de usuários, produtos e categorias.
 
-### Exemplo Collection Aninhada Json
-<img src="imagensReadme/img1.png" alt="json" width="450"/>
-<img src="imagensReadme/img2.png" alt="json" width="550"/>
 
 
