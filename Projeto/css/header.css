@@ -5,6 +5,22 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1001;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -230px;
+    left: 74px;
+    width: 200px;
+    height: 230px;
+    background-image: url(../img/pendurado-removebg-preview.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1000;
 }
 
 header nav {
